@@ -14,7 +14,11 @@ class Review  {
     }
 
 
+public void updateStars(int a){
+setNumber(a);
 
+
+}
 
     public String getBody() {
         return body;
@@ -31,6 +35,10 @@ class Review  {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     @Override
