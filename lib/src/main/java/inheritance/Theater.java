@@ -2,26 +2,30 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Theater {
-   private String name;
+public class Theater extends Department {
 
     private ArrayList<String> movies=new ArrayList<>();
-    public Theater(String name) {
-        this.name = name;
 
+    public Theater(String name, int star) {
+        super(name, star);
     }
+
     public void addMovies(String M){
         movies.add(M);
 
     }
     public void removeMovie(String M){
-        movies.remove(M);
+      if (movies.contains(M)){movies.remove(M);}else {
+          System.out.println("we already have the Movies"+movies);
+      }
+
     }
 
     @Override
     public String toString() {
         return "Theater{" +
-                "name='" + name + '\'' +
+                "name='" + super.getName() + '\'' +
+                "number='" + super.getReviews() + '\'' +
                 ", movies=" + movies +
                 '}';
     }

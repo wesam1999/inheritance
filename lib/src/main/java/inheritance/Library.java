@@ -8,14 +8,28 @@ public class Library {
 
     public static void main(String[] args) {
 
-       Restaurant nasrate =new Restaurant("nasrate",2000);
-       Review review=new Review(5,"sdsa","wesam");
-        Review review1=new Review(4,"sdsdsdg","ali");
-        nasrate.addReview(review);
-        nasrate.addReview(review1);
-        System.out.println(nasrate);
-        System.out.println(review);
+        Restaurant restaurant=new Restaurant("Mac",5,200);
+        Shop shop=new Shop("Mac",3,"contanin defent food",12);
+        Department department=new Department("Mac",4);
+        Review review=new Review(1,"sadas","wesam");
+        Theater theater=new Theater("Mac",4);
+
+//for the restaurant method
+        System.out.println(restaurant.getPrice());
+        //for review method
+        review.updateStars(1);
+        System.out.println(review.getNumber());
+        System.out.println(review.getBody());
+        System.out.println(review.getAuthor());
+review.setMoviesName("spider man");
+//for the theater method
+        theater.addMovies("ali");
+theater.addMovies("sasd");
+theater.addMovies("kl;");
+theater.removeMovie("ali");
+// for the department method
+        department.addReview(review);
+        System.out.println(department.getArr());
+
     }
-
-
 }
